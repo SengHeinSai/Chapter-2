@@ -33,3 +33,7 @@ variable "server_port" {
   type        = number
   default     = 8080
 }
+output "public_ip" {
+  value       = aws_instance.firstec2.public_ip
+  description = "The pub­lic IP ad­dress of the web server"
+}
